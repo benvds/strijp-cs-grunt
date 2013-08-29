@@ -1,0 +1,249 @@
+/* ======== MODULES ======== */
+
+@import 'mixins';
+
+@highlight: #feb92f;
+
+/* ---- general ---- */
+
+.clickable {
+    cursor: pointer;
+}
+
+/* ---- site header ---- */
+
+#site-header {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    padding-right: 2em;
+    background-color: black;
+    border-bottom: 1px solid gray;
+}
+
+#logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+#site-nav {
+    float: right;
+
+    li, a {
+        display: inline-block;
+    }
+    a {
+        padding: .5em 1em;
+    }
+}
+
+/* ---- assets ---- */
+
+.asset {
+    display: inline-block;
+}
+.arrow {
+    width: 1.8em;
+    height: 1.8em;
+}
+
+/* ---- slideshow (home) ---- */
+
+article.slideshow {
+    position: absolute;
+    right: 7em;
+    bottom: 7em;
+    width: 40em;
+
+    header {
+        width: 36em; /* 26em * 1.5 because of font sizes */
+    }
+
+    .prefix, h1 {
+        position: relative;
+        float: left;
+        min-height: 1px;
+    }
+    .prefix {
+        width: 4em;
+        font-size: 1.5em;
+    }
+
+    h1 {
+        width: 19em;
+        margin: .33em 0 .33em 1em;
+    }
+
+    .entry-content {
+        padding-left: 33.33%;
+    }
+}
+
+.asset.arrow {
+    position: absolute;
+    top: 4em;
+    left: 0;
+    opacity: 0;
+
+    &:nth-child(even) {
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        transform: rotate(180deg);
+        left: 2em;
+        top: -4em;
+    }
+
+    &.asset-loaded {
+        -webkit-transition: all 1s cubic-bezier(.05,.75,.25,.95) 5s;
+        top: 0 !important;
+        opacity: 1 !important;
+    }
+}
+
+/* ---- gallery (projects) ---- */
+
+.gallery-overview {
+    position: absolute;
+    width: 100%;
+    top: 14em;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    li {
+        float: left;
+    }
+}
+
+.gallery-details {
+    position: fixed;
+    right: -40em;
+    top: 4em;
+    width: 32em;
+    padding: .5em 1.5em;
+    background-color: hsl(0, 0%, 20%);
+    .border-radius;
+    -webkit-transition: all .25s cubic-bezier(.05,.75,.25,.95) 0s;
+
+    &.active {
+        right: 3em;
+    }
+}
+
+.gallery-group {
+    width: 30em;
+    padding: 0;
+    list-style: none;
+
+    li {
+        float: left;
+        position: relative;
+        width: 8em;
+        height: 8em;
+        margin: .9375em;
+        overflow: hidden;
+        border: .0625em solid white;
+        .border-radius;
+
+        &.w2 {
+            width: 17.88em;
+        }
+        &.h2 {
+            height: 17.88em;
+        }
+    }
+
+    // img.bg, .content {
+    //     position: absolute;
+    // }
+
+    .content {
+        padding: 1.5em;
+    }
+}
+
+.gallery .slider-group {
+    padding-right: 2 * .9375em;
+//     &:last-child {
+//         padding-right: 0;
+//     }
+}
+
+/* ---- carousel (team) ---- */
+
+/* ---- overview (workplaces) ---- */
+
+.overview-header {
+    position: fixed;
+    right: 3em;
+    top: 4em;
+    width: 32em;
+    padding: .5em 1.5em;
+    background-color: hsl(0, 0%, 20%);
+    .border-radius;
+    -webkit-transition: all .25s cubic-bezier(.05,.75,.25,.95) 0s;
+}
+
+.overview {
+
+    @sectionWidth: 20em;
+
+    section {
+        position: relative;
+        float: left;
+        width: @sectionWidth;
+        height: @sectionWidth;
+        overflow: hidden;
+        margin-right: 2em;
+        border: 1px solid white;
+        .border-radius;
+    }
+
+    .slider {
+        position: absolute;
+        width: 100%;
+        top: 18em;
+    }
+
+    .bg {
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        max-width: none;
+        width: 133.33%;
+        height: 100%;
+    }
+    .entry-content {
+        position: relative;
+        height: 100%;
+        z-index: 2;
+    }
+
+    h2 {
+        position: absolute;
+        top: 0;
+        width: 90%;
+        margin: 5%;
+        padding: .25em .5em;
+        .border-radius;
+        background-color: black;
+        color: @highlight;
+    }
+
+    .description {
+        position: absolute;
+        margin: 0;
+        padding: .5em 1em;
+        bottom: 0;
+        background-color: black;
+        background-color: hsla(0, 0%, 0%, .5);
+        color: white;
+    }
+}
+/* ---- archive (blog) ---- */
+
+/* ---- post (blog) ---- */

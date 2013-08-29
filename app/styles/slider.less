@@ -1,0 +1,42 @@
+/* ======== SLIDER ======== */
+
+@leftRightWidth: 80px;
+
+.slider {
+    width: 100%;
+}
+
+.slider-group {
+}
+
+.slider-wrap, .slider-left, .slider-right {
+    float: left;
+    width: 100%;
+}
+
+.slider-content {
+    overflow: hidden;
+    margin: 0 @leftRightWidth;
+}
+
+.slider-inner {
+    -webkit-transition: margin .25s cubic-bezier(.05,.75,.25,.95) 0s;
+}
+
+.slider-left, .slider-right {
+    width: @leftRightWidth;
+    height: 300px;
+    background: transparent url('../img/gallery-arrow.png') center center no-repeat;
+    background-size: 60px 50px;
+    cursor: pointer;
+}
+
+.slider-left {
+    margin-left: -100%;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+.slider-right {
+    margin-left: -1 * @leftRightWidth;
+}

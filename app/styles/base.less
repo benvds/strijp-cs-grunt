@@ -1,0 +1,76 @@
+/* ======== BASE ======== */
+
+*, *:before, *:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html, body {
+    width:100%;
+    height:100%;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+html {
+    background-color: black;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+html,
+button,
+input,
+select,
+textarea,
+p,
+a {
+    color: hsl(0, 0%, 70%);
+}
+
+h1 {
+    font-size: 1.5em;
+}
+
+img {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+nav {
+
+	> ul, a {
+		margin: 0;
+		text-decoration: none;
+	}
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
