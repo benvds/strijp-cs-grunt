@@ -19,10 +19,29 @@
     </head>
     <body>
 
-		{{> header }}
-		{{> body }}
+        {{> site-header }}
 
-        <!--[if lt IE 7]>
+        <div class="main-container">
+            <div class="main wrapper clearfix">
+
+                {{> body }}
+
+            </div> <!-- #main -->
+        </div> <!-- #main-container -->
+
+        <div id="bg"></div>
+
+        <div id="assets">
+            <svg class="arrow" viewBox="0 0 150 148.49" >
+                <path fill="#FCC52A" d="M89.152,73.82l20.52,19.34c4.481,4.246,10.141,4.48,13.915,0.235l4.95-5.424
+                    c3.304-3.538,3.539-9.67-0.234-13.208L80.897,30.189c-3.773-3.537-9.2-3.537-13.208,0.472L20.756,75
+                    c-3.773,3.537-3.538,9.434,0,12.972l5.425,5.896c4.01,4.482,8.725,3.773,13.445-0.707l20.987-19.575v67.451
+                    c0,4.718-4.48,8.726-9.197,7.075C21.936,138.443,0,108.962,0,75.943C0,35.615,33.021,0,75.001,0C117.216,0,150,35.615,150,75.943
+                    c0,32.783-20.991,61.557-51.652,72.169c-4.715,1.65-9.197-2.357-9.197-7.075V73.82H89.152z"/>
+            </svg>
+        </div>
+
+        <!--[if lt IE 8]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
@@ -37,7 +56,7 @@
         </script>
 
         <!-- build:js scripts/main.js -->
-        <script data-main="scripts/main" src="bower_components/requirejs/require.js"></script>
+        <script data-main="scripts/main" src="scripts/hello.js"></script>
         <!-- endbuild -->
 </body>
 </html>
